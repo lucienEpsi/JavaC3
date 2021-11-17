@@ -5,6 +5,7 @@
  */
 package dp.strategie;
 
+import dp.adaptateur.AdaptateurDindon;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,15 +15,10 @@ import java.util.List;
  */
 public class Main {
     public static void main(String[] args) {
-        //List<Canard> canards = initCanards();
-        List<Canard> canards = new ArrayList<>();
-        canards.add( 
-                new Morillon(new VolAvecAiles()));
-        canards.add(
-                new Colvert(new VolAvecAiles()));
-        canards.add(
-                new CanardEnBois(new NoVol()));
+        List<Canard> canards = initCanards();
+        canards.add(new AdaptateurDindon());
         for(Canard c : canards){
+            c.faitCoinCoin();
             c.afficheToi();
             c.envoleToi();
         }
