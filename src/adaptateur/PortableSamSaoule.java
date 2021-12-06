@@ -13,7 +13,7 @@ package adaptateur;
 public class PortableSamSaoule {
     public void ChargerPortable(int volts)
     {
-        System.out.println("Portable SamSaoule en charge");
-        System.out.print("voltage : "+ volts);
+        System.out.print("Portable SamSaoule en charge");
+        System.out.println("voltage : "+ volts);
     }
 }

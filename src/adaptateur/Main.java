@@ -22,19 +22,25 @@ public class Main {
          * ****************** Portable SonneEricSonne**********************
          */
         //on crée le portable et son adaptateur
+        PortableSamSaoule sam = new PortableSamSaoule();
+        
+        IChargeable adapteurSam = new AdaptateurSamSaoule(sam);
         
         //on donne le portable à charger mais en utilisant son adaptateur
-        
+        chargeur.brancherPortable(adapteurSam);
 
-        System.out.println("SonneEricSonne en charge");
+        System.out.println("SamSaoule en charge ");
 
         /**
          * ******************* Portable SamSaoule**************************
          */
         //on crée le portable et son adaptateur
-        
+        PortableSonneEricSonne erick = new PortableSonneEricSonne();
+        IChargeable adapteurErick = new AdaptateurSonneEricSonne(erick);
         //on donne le portable à charger mais en utilisant son adaptateur
-        System.out.println("Samsaoule en charge");
+        
+        chargeur.brancherPortable(adapteurErick);
+        System.out.println("SonneErickSonne en charge");
 
     }
 
