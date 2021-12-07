@@ -1,0 +1,35 @@
+@startuml
+abstract class dp.decorateur.Facture
+annotation java.lang.Override
+class dp.decorateur.BufferedReaderMaj
+class dp.decorateur.DecorateurFacture
+class dp.decorateur.Entete
+class dp.decorateur.FactureDetaille
+class dp.decorateur.FactureSimple
+class dp.decorateur.Main
+class dp.decorateur.Main2
+class dp.decorateur.Pub
+class java.io.BufferedReader
+class java.io.FileNotFoundException
+class java.io.FileReader
+class java.io.IOException
+class java.io.Reader
+dp.decorateur.BufferedReaderMaj ..> java.lang.Override
+dp.decorateur.BufferedReaderMaj --|> java.io.BufferedReader
+dp.decorateur.BufferedReaderMaj ..> java.io.IOException
+dp.decorateur.BufferedReaderMaj ..> java.io.Reader
+dp.decorateur.DecorateurFacture --|> dp.decorateur.Facture
+dp.decorateur.DecorateurFacture ..> java.lang.Override
+dp.decorateur.Entete ..> java.lang.Override
+dp.decorateur.Entete --|> dp.decorateur.DecorateurFacture
+dp.decorateur.FactureDetaille --|> dp.decorateur.Facture
+dp.decorateur.FactureDetaille ..> java.lang.Override
+dp.decorateur.FactureSimple --|> dp.decorateur.Facture
+dp.decorateur.FactureSimple ..> java.lang.Override
+dp.decorateur.Main2 ..> java.io.BufferedReader
+dp.decorateur.Main2 ..> java.io.FileNotFoundException
+dp.decorateur.Main2 ..> java.io.FileReader
+dp.decorateur.Main2 ..> java.io.IOException
+dp.decorateur.Pub ..> java.lang.Override
+dp.decorateur.Pub --|> dp.decorateur.DecorateurFacture
+@enduml

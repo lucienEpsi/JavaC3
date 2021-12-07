@@ -1,0 +1,150 @@
+@startuml
+abstract class dp.composite.Cellulose
+abstract class dp.decorateur.Facture
+abstract class dp.strategie.Canard
+annotation java.lang.Override
+class adaptateur.AdaptateurSamSaoule
+class adaptateur.AdaptateurSonneEricSonne
+class adaptateur.Chargeur
+class adaptateur.Main
+class adaptateur.PortableSamSaoule
+class adaptateur.PortableSonneEricSonne
+class adaptateur.TelCarouf
+class cours.collection.MainCollection
+class cours.collection.MonComparator
+class dp.abstractfactory.Main
+class dp.abstractfactory.usine.PneuNeigeFirestone
+class dp.abstractfactory.usine.PneuNeigeMichelin
+class dp.abstractfactory.usine.PneuSportFirestone
+class dp.abstractfactory.usine.PneuSportMichelin
+class dp.abstractfactory.usine.UsineFirestone
+class dp.abstractfactory.usine.UsineMichelin
+class dp.adaptateur.AdaptateurDindon
+class dp.adaptateur.Canard
+class dp.adaptateur.Dodo
+class dp.composite.Branche
+class dp.composite.Feuille
+class dp.composite.Main
+class dp.decorateur.BufferedReaderMaj
+class dp.decorateur.DecorateurFacture
+class dp.decorateur.Entete
+class dp.decorateur.FactureDetaille
+class dp.decorateur.FactureSimple
+class dp.decorateur.Main
+class dp.decorateur.Main2
+class dp.decorateur.Pub
+class dp.strategie.CanardEnBois
+class dp.strategie.Colvert
+class dp.strategie.Main
+class dp.strategie.Morillon
+class dp.strategie.NoVol
+class dp.strategie.VolAvecAiles
+class java.io.BufferedReader
+class java.io.FileNotFoundException
+class java.io.FileReader
+class java.io.IOException
+class java.io.Reader
+class java.lang.Exception
+class java.util.ArrayList
+class java.util.Collection
+class java.util.Collections
+class java.util.List
+class java.util.Objects
+class java.util.Set
+class java.util.TreeSet
+class javac3.Calculette
+class javac3.JavaC3
+class javac3.Main
+class javac3.MonException
+class javac3.Personne
+class javac3.TestPerfChaine
+interface adaptateur.IChargeable
+interface dp.abstractfactory.Garage
+interface dp.abstractfactory.PneuNeige
+interface dp.abstractfactory.PneuSport
+interface dp.adaptateur.Dindon
+interface dp.strategie.Vol
+interface java.lang.Comparable
+interface java.util.Comparator
+adaptateur.AdaptateurSamSaoule ..> java.lang.Override
+adaptateur.AdaptateurSamSaoule --|> adaptateur.IChargeable
+adaptateur.AdaptateurSonneEricSonne ..> java.lang.Override
+adaptateur.AdaptateurSonneEricSonne --|> adaptateur.IChargeable
+adaptateur.TelCarouf ..> java.lang.Override
+adaptateur.TelCarouf --|> adaptateur.IChargeable
+cours.collection.MainCollection ..> java.lang.Override
+cours.collection.MainCollection ..> java.util.ArrayList
+cours.collection.MainCollection ..> java.util.Collection
+cours.collection.MainCollection ..> java.util.Collections
+cours.collection.MainCollection ..> java.util.List
+cours.collection.MainCollection ..> java.util.Set
+cours.collection.MainCollection ..> java.util.TreeSet
+cours.collection.MainCollection ..> javac3.Personne
+cours.collection.MainCollection ..> java.util.Comparator
+cours.collection.MonComparator ..> java.lang.Override
+cours.collection.MonComparator ..> javac3.Personne
+cours.collection.MonComparator --|> java.util.Comparator
+dp.abstractfactory.Main ..> dp.abstractfactory.usine.UsineFirestone
+dp.abstractfactory.Main ..> dp.abstractfactory.usine.UsineMichelin
+dp.abstractfactory.usine.PneuNeigeFirestone ..> java.lang.Override
+dp.abstractfactory.usine.PneuNeigeFirestone --|> dp.abstractfactory.PneuNeige
+dp.abstractfactory.usine.PneuNeigeMichelin ..> java.lang.Override
+dp.abstractfactory.usine.PneuNeigeMichelin --|> dp.abstractfactory.PneuNeige
+dp.abstractfactory.usine.PneuSportFirestone ..> java.lang.Override
+dp.abstractfactory.usine.PneuSportFirestone --|> dp.abstractfactory.PneuSport
+dp.abstractfactory.usine.PneuSportMichelin ..> java.lang.Override
+dp.abstractfactory.usine.PneuSportMichelin --|> dp.abstractfactory.PneuSport
+dp.abstractfactory.usine.UsineFirestone ..> java.lang.Override
+dp.abstractfactory.usine.UsineFirestone --|> dp.abstractfactory.Garage
+dp.abstractfactory.usine.UsineFirestone ..> dp.abstractfactory.PneuNeige
+dp.abstractfactory.usine.UsineFirestone ..> dp.abstractfactory.PneuSport
+dp.abstractfactory.usine.UsineMichelin ..> java.lang.Override
+dp.abstractfactory.usine.UsineMichelin --|> dp.abstractfactory.Garage
+dp.abstractfactory.usine.UsineMichelin ..> dp.abstractfactory.PneuNeige
+dp.abstractfactory.usine.UsineMichelin ..> dp.abstractfactory.PneuSport
+dp.adaptateur.AdaptateurDindon ..> java.lang.Override
+dp.adaptateur.AdaptateurDindon --|> dp.adaptateur.Canard
+dp.adaptateur.Dodo ..> java.lang.Override
+dp.adaptateur.Dodo --|> dp.adaptateur.Dindon
+dp.composite.Branche --|> dp.composite.Cellulose
+dp.composite.Branche ..> java.lang.Override
+dp.composite.Branche ..> java.util.ArrayList
+dp.composite.Branche ..> java.util.List
+dp.composite.Feuille --|> dp.composite.Cellulose
+dp.composite.Feuille ..> java.lang.Override
+dp.decorateur.BufferedReaderMaj ..> java.lang.Override
+dp.decorateur.BufferedReaderMaj --|> java.io.BufferedReader
+dp.decorateur.BufferedReaderMaj ..> java.io.IOException
+dp.decorateur.BufferedReaderMaj ..> java.io.Reader
+dp.decorateur.DecorateurFacture --|> dp.decorateur.Facture
+dp.decorateur.DecorateurFacture ..> java.lang.Override
+dp.decorateur.Entete ..> java.lang.Override
+dp.decorateur.Entete --|> dp.decorateur.DecorateurFacture
+dp.decorateur.FactureDetaille --|> dp.decorateur.Facture
+dp.decorateur.FactureDetaille ..> java.lang.Override
+dp.decorateur.FactureSimple --|> dp.decorateur.Facture
+dp.decorateur.FactureSimple ..> java.lang.Override
+dp.decorateur.Main2 ..> java.io.BufferedReader
+dp.decorateur.Main2 ..> java.io.FileNotFoundException
+dp.decorateur.Main2 ..> java.io.FileReader
+dp.decorateur.Main2 ..> java.io.IOException
+dp.decorateur.Pub ..> java.lang.Override
+dp.decorateur.Pub --|> dp.decorateur.DecorateurFacture
+dp.strategie.CanardEnBois --|> dp.strategie.Canard
+dp.strategie.CanardEnBois ..> java.lang.Override
+dp.strategie.Colvert --|> dp.strategie.Canard
+dp.strategie.Colvert ..> java.lang.Override
+dp.strategie.Main ..> dp.adaptateur.AdaptateurDindon
+dp.strategie.Main ..> java.util.ArrayList
+dp.strategie.Main ..> java.util.List
+dp.strategie.Morillon --|> dp.strategie.Canard
+dp.strategie.Morillon ..> java.lang.Override
+dp.strategie.NoVol ..> java.lang.Override
+dp.strategie.NoVol --|> dp.strategie.Vol
+dp.strategie.VolAvecAiles ..> java.lang.Override
+dp.strategie.VolAvecAiles --|> dp.strategie.Vol
+javac3.MonException --|> java.lang.Exception
+javac3.Personne ..> java.lang.Override
+javac3.Personne ..> java.util.Objects
+javac3.Personne --|> java.lang.Comparable
+@enduml
